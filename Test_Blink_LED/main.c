@@ -3,12 +3,12 @@
 // define colors
 uint32_t delay = 50000;
 uint32_t RED = BIT0;
-uint32_t YELLOW = (BIT0 | BIT1);
-uint32_t GREEN = BIT1;
-uint32_t CYAN = (BIT1 | BIT2);
-uint32_t BLUE = BIT2;
+uint32_t YELLOW = BIT0;//(BIT0 | BIT1);
+uint32_t GREEN = (BIT0 | BIT2);//BIT1;
+uint32_t CYAN = (BIT0 | BIT2);//(BIT1 | BIT2);
+uint32_t BLUE = (BIT0 | BIT2);//BIT2;
 uint32_t MAG = (BIT0 | BIT2);
-uint32_t WHITE = (BIT0 | BIT1 | BIT2);
+uint32_t WHITE = BIT0;//(BIT0 | BIT1 | BIT2);
 
 int main(void) {
     volatile uint32_t i;
