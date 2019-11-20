@@ -74,7 +74,7 @@ void PORT5_IRQHandler(void)
     P5->IFG &= 0x00;
 
     //Process Orientation
-    if ((TEMPFLAG & ENCODER_1A ) && !(TEMPFLAG & ENCODER_1B ) && (LeftFirst = 0))
+    if ((TEMPFLAG & ENCODER_1A ) && !(TEMPFLAG & ENCODER_1B ) && (LeftFirst == 0))
     {
         RightFirst = 1;
     }
@@ -84,7 +84,7 @@ void PORT5_IRQHandler(void)
     }
 
     //Fulfill Full Turn
-    if (!(TEMPFLAG & ENCODER_1A ) && (TEMPFLAG & ENCODER_1B ) && (RightFirst = 1))
+    if (!(TEMPFLAG & ENCODER_1A ) && (TEMPFLAG & ENCODER_1B ) && (RightFirst == 1))
     {
         TurnRight = 1;
         RightFirst = 0;
