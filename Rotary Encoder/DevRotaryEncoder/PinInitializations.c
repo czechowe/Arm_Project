@@ -44,7 +44,6 @@ void EncoderInitialization(void)
     P5->OUT &= ~(ENCODER_1A | ENCODER_1B );          //SET PULL UP RESISTOR
     P5->IE |= (ENCODER_1A | ENCODER_1B );          //ENABLE INTERUPT TRIGGER
     P5->IES |=  (ENCODER_1A | ENCODER_1B );       //SET HIGH TO LOW EDGE TRIGGER
-
 }
 
 void InterruptInitialization(void)
