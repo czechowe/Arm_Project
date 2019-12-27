@@ -1,9 +1,15 @@
-/*
- * PinAssignments.h
- *
- *  Created on: Nov 7, 2019
- *      Author: czech
- */
+/******************************************************************************
+*--------------------------------- HEADER FILE -------------------------------*
+*----------------------------- PinAssignments.h ------------------------------*
+*DESCRIPTION:This File is used as a mapping header file for assigning relevant*
+*DESCRIPTION:names to specific processor pins, so that when setting and config*
+*DESCRIPTION:-uring a pin the code becomes easier and more logical to read.---*
+*DESCRIPTION:This file also acts as a way to keep track of and reserve pins---*
+*DESCRIPTION:for specific and singular uses, so that they are not attempted to*
+*DESCRIPTION:be reset/allocated elsewhere.------------------------------------*
+*-----------------------------------------------------------------------------*
+*Authors:Evan Czechowicz & Taylor Haag----------------------------------------*
+******************************************************************************/
 
 #ifndef PINASSIGNMENTS_H_
 #define PINASSIGNMENTS_H_
@@ -17,8 +23,8 @@
 //#define BIT3 // PREDEFINED FOR USB INTEFACE DONT USE
 //#define BIT4 // NOT AVAILABLE
 //#define BIT5
-//#define BIT6
-//#define BIT7
+#define I2C_SDA1 BIT6
+#define I2C_SCL1 BIT7
 
 /*****PORT2*****/
 //#define BIT0 // NOT AVAILABLE
@@ -77,7 +83,7 @@
 //#define BIT3
 //#define BIT4
 //#define BIT5
-//#define BIT6
+#define ServoSignalOne BIT6
 //#define BIT7
 
 /*****PORT8*****/
@@ -108,13 +114,13 @@
 //#define BIT4
 //#define BIT5
 
-/*****NCIV Interrupt Stack Members*****/
-//#define P1_INTRPT_STK_ADRS 0x00000008
-//#define P2_INTRPT_STK_ADRS 0x00000010
-//#define P3_INTRPT_STK_ADRS 0x00000020
-//#define P4_INTRPT_STK_ADRS 0x00000040
-#define P5_INTRPT_STK_ADRS 0x00000080
-//#define P6_INTRPT_STK_ADRS 0x00000100
+/*****PORTJ*****/
+//#define BIT0
+//#define BIT1
+//#define BIT2
+//#define BIT3
+//#define BIT4
+//#define BIT5
 
 
 #endif /* PINASSIGNMENTS_H_ */
